@@ -1,0 +1,22 @@
+{
+  "name": "golings-tool-terraform",
+  "build": {
+    "context": "..",
+    "dockerfile": "../Dockerfile"
+  },
+  "mounts": [
+    "source=${env:HOME}/.aws,target=/root/.aws,type=bind"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder}/../,target=/terraform,type=bind,consistency=delegated",
+  "workspaceFolder": "/terraform/terraform",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hashicorp.terraform",
+        "GitHub.copilot"
+      ]
+    }
+  },
+  "remoteUser": "root",
+  "postCreateCommand": "/bin/sh /terraform/terraform/.devcontainer/post_created.sh"
+}

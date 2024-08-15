@@ -1,1 +1,4 @@
 .DS_Store
+golings-main
+data/**
+!**.gitkeep
