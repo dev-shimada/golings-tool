@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket  = var.aws["bucket"]
+    bucket  = var.aws_bucket
     key     = "terraform.tfstate"
-    region  = var.aws["region"]
-    profile = var.aws["profile"]
+    region  = var.aws_region
+    profile = var.aws_profile
   }
 }

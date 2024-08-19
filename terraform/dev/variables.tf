@@ -1,9 +1,14 @@
-variable "aws" {
-  default = {
-    profile = "default"
-    region  = "ap-northeast-1"
-    bucket  = "terraform-state"
-  }
+variable "aws_profile" {
+  type    = string
+  default = "default"
+}
+variable "aws_region" {
+  type    = string
+  default = "ap-northeast-1"
+}
+variable "aws_bucket" {
+  type    = string
+  default = "terraform-state"
 }
 variable "schedule" {
   type    = string

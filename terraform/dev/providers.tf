@@ -1,6 +1,6 @@
 provider "aws" {
-  region  = var.aws["region"]
-  profile = var.aws["profile"]
+  region  = var.aws_region
+  profile = var.aws_profile
   default_tags {
     tags = {
       "Terraform" = "true"

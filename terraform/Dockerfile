@@ -1,11 +1,11 @@
 FROM debian:bookworm-slim
 
 ARG BUCKET
-ENV TF_VAR_bucket=${BUCKET}
+ENV TF_VAR_aws_bucket=${BUCKET}
 ARG PROFILE=default
-ENV TF_VAR_profile=${PROFILE}
+ENV TF_VAR_aws_profile=${PROFILE}
 ARG REGION=ap-northeast-1
-ENV TF_VAR_region=${REGION}
+ENV TF_VAR_aws_region=${REGION}
 ARG SCHEDULE="cron(0 10 ? * MON *)"
 ENV TF_VAR_schedule=${SCHEDULE}
 
